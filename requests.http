@@ -1,0 +1,48 @@
+### Get all employees:
+GET http://localhost:8000/employees
+
+### Get one employee:
+GET http://localhost:8000/employees/6240675944679397b45ceb3f
+
+### Post an employee:
+POST http://localhost:8000/employees
+Content-Type: application/json
+
+{
+  "name": "Kurt Cobain",
+  "birthday": "1979-12-01",
+  "contract": "2029-09-07",
+  "jmbg": "0101979855055",
+  "bankAccount": "123456789012345678",
+  "eyes": "1964-07-20",
+  "safety": "1964-07-20",
+  "fire": "1964-07-20",
+  "firstAid": "1964-07-20",
+  "jobRole":"Frontend developer",
+  "skills":["javascript", "reactjs", "css", "html"],
+  "paycheck": {
+    "real": 800,
+    "onAccount": 500
+  },
+  "health": {
+    "healthName": "Bob",
+    "healthDate": "1964-07-20"
+  },
+  "fitpass": {
+    "fitpassName": "Bob",
+    "fitpassDate": "1964-07-20"
+  }
+}
+
+### Edit an employee:
+PUT http://localhost:8000/employees/625176257d7d5b31a9394c5b
+Content-Type: application/json
+
+{
+  "name": "Adam",
+}
+
+### Delete an employee:
+DELETE http://localhost:8000/employees/628c9b368b065345a4c6c6f3
+
+
