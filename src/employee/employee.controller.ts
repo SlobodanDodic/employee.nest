@@ -8,7 +8,9 @@ import {
   Post,
   Put,
   Res,
+  UseGuards,
 } from '@nestjs/common';
+import { JwtGuard } from '../auth/guards/jwt.guard';
 // import { Employee } from '../schema/employee.schema';
 import { CreateEmployeeDto } from './create-employee.dto';
 import { EmployeeService } from './employee.service';
@@ -36,6 +38,7 @@ export class EmployeeController {
     });
   }
 
+  @UseGuards(JwtGuard)
   @Get('/:id')
   async findById(@Res() response, @Param('id') id: string): Promise<any> {
     const employee = await this.EmployeeService.readById(id);
