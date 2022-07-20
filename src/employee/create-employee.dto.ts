@@ -21,21 +21,19 @@ export class CreateEmployeeDto {
   readonly contract: Date;
 
   @Length(13, 13, {
-    message: 'JMBG is too long or to short. Length must be 13 digits',
+    message: 'JMBG must have exactly 13 digits. ',
   })
   readonly jmbg: string;
 
   // Bank accounts
 
   @Length(18, 18, {
-    message:
-      'Bank account number is too long or to short. Length must be 18 digits',
+    message: 'First bank account number must have exactly 18 digits. ',
   })
   readonly bankAccountOne: string;
 
   @Length(18, 18, {
-    message:
-      'Bank account number is too long or to short. Length must be 18 digits',
+    message: 'Second bank account number must have exactly 18 digits. ',
   })
   readonly bankAccountTwo: string;
 

@@ -19,6 +19,7 @@ import { EmployeeService } from './employee.service';
 export class EmployeeController {
   constructor(private readonly EmployeeService: EmployeeService) {}
 
+  @UseGuards(JwtGuard)
   @Post()
   async createEmployee(
     @Res() response,
@@ -30,6 +31,7 @@ export class EmployeeController {
     });
   }
 
+  @UseGuards(JwtGuard)
   @Get()
   async fetchAll(@Res() response): Promise<any> {
     const employees = await this.EmployeeService.readAll();
