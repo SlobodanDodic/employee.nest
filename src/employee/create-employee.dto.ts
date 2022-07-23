@@ -78,6 +78,6 @@ export class CreateEmployeeDto {
   @IsDateString()
   readonly fitpassDate: Date;
 
-  @IsString()
-  readonly comment: string;
+  @IsArray()
+  readonly comment: string[];
 }

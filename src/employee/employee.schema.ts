@@ -61,8 +61,8 @@ export class Employee {
   @Prop()
   fitpassDate: Date;
 
-  @Prop()
-  comment: string;
+  @Prop([String])
+  comment: string[];
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);
