@@ -52,8 +52,8 @@ export class Employee {
   payAccount: number;
 
   // Benefits
-  @Prop()
-  benefitUser: string;
+  @Prop([String])
+  benefitUser: string[];
 
   @Prop()
   healthDate: Date;
@@ -61,8 +61,8 @@ export class Employee {
   @Prop()
   fitpassDate: Date;
 
-  @Prop([String])
-  comment: string[];
+  @Prop()
+  comment: string;
 }
 
 export const EmployeeSchema = SchemaFactory.createForClass(Employee);

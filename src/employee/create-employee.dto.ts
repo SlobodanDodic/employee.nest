@@ -69,8 +69,8 @@ export class CreateEmployeeDto {
 
   // Benefits
 
-  @IsString()
-  readonly benefitUser: string;
+  @IsArray()
+  readonly benefitUser: string[];
 
   @IsDateString()
   readonly healthDate: Date;
@@ -78,6 +78,6 @@ export class CreateEmployeeDto {
   @IsDateString()
   readonly fitpassDate: Date;
 
-  @IsArray()
-  readonly comment: string[];
+  @IsString()
+  readonly comment: string;
 }
