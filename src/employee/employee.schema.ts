@@ -46,10 +46,10 @@ export class Employee {
 
   // Paycheck
   @Prop()
-  payTotal: number;
+  paycheck: number;
 
   @Prop()
-  payAccount: number;
+  bonus: number;
 
   // Benefits
   @Prop([String])

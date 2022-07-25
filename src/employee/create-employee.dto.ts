@@ -62,10 +62,10 @@ export class CreateEmployeeDto {
   // Paycheck
 
   @IsNumberString()
-  readonly payTotal: number;
+  readonly paycheck: number;
 
   @IsNumberString()
-  readonly payAccount: number;
+  readonly bonus: number;
 
   // Benefits
 
