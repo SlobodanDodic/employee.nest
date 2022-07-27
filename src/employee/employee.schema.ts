@@ -52,8 +52,8 @@ export class Employee {
   bonus: number;
 
   // Benefits
-  @Prop([String])
-  benefitUser: string[];
+  @Prop()
+  benefitUser: string;
 
   @Prop()
   healthDate: Date;
